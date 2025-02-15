@@ -174,3 +174,19 @@ h1 {
     }
 }
 
+/* Media query for screens larger than 600px */
+@media (max-width: 600px) {
+    .container {
+        height: auto;
+        width: auto;
+    }
+    .main-text{
+        width: 400px;
+        line-height: 1.5;
+    }
+    .video-container iframe{
+        width: 300px;
+        height: 200px
+    }
+}
+
