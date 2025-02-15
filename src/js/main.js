@@ -1,20 +1,3 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//     const images = document.querySelectorAll(".image-container img");
-//     let currentIndex = 0;
-
-//     function showNextImage() {
-//         images[currentIndex].classList.remove("active"); // Hide current image
-//         currentIndex = (currentIndex + 1) % images.length; // Move to next image
-//         images[currentIndex].classList.add("active"); // Show new image
-//     }
-
-//     // Initially show the first image
-//     images[currentIndex].classList.add("active");
-
-//     // Change image every 5 seconds
-//     setInterval(showNextImage, 5000);
-// });
-
 document.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll('.image-container .image');
     let currentIndex = 0;
@@ -53,3 +36,18 @@ const initialDate = new Date('2024-01-21T00:00:00');
         }
 
         setInterval(updateCountdown, 1000); // Update every second
+
+// Heart falling animation
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.style.left = `${Math.random() * 100}%`;
+    heart.style.animationDuration = `${Math.random() * 3 + 2}s`; // Random duration between 2-5 seconds
+    document.querySelector('.heart-container').appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000); // Remove heart after animation is done
+}
+
+setInterval(createHeart, 300); // Create a heart every 300ms
