@@ -11,15 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(showNextImage, 3000); // Change image every 3 seconds
 });
 
-// const initialDate = new Date('2024-01-21T00:00:00');
-const initialDate = new Date('2025-10-14T00:00:00');
+const initialDate = new Date('2024-01-21T00:00:00');
+// const initialDate = new Date('2025-10-14T00:00:00');
 
         function updateCountdown() {
             const now = new Date();
             // const diff = now - initialDate;
             
-            // const diffInMs = now - initialDate;
-            const diffInMs = initialDate - now;
+            const diffInMs = now - initialDate;
+            // const diffInMs = initialDate - now;
             const diffDate = new Date(diffInMs);
             
             const years = diffDate.getUTCFullYear() - 1970;
